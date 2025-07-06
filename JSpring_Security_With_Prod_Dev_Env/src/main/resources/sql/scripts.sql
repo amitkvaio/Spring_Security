@@ -1,0 +1,27 @@
+CREATE TABLE customer (
+  id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  email VARCHAR2(45) NOT NULL,
+  pwd VARCHAR2(200) NOT NULL,
+  role VARCHAR2(45) NOT NULL
+);
+
+
+--INSERT INTO "SYSTEM"."CUSTOMER" (ID, EMAIL, PWD, ROLE) VALUES ('1', 'user@gmail.com', '{noop}user', 'ROLE_USER')
+--INSERT INTO "SYSTEM"."CUSTOMER" (ID, EMAIL, PWD, ROLE) VALUES ('2', 'admin@gmail.com', '{bcrypt}$2a$10$0XR7EcRzxJQm3NlOV1RzDe..La4yJoyaSNh7n9ihxJ.30sye/uFo2', 'ROLE_ADMIN')
+
+
+/*
+
+http://localhost:2025/register ==> POST REQUEST TRY TO EXECUTE BY POSTMAN
+
+{
+  "email": "user@example.com",
+  "pwd": "securePassword123",
+  "role": "USER"
+}
+
+NOT:: IF SOME ALREADY AUTHORIZATION HAS SET PLEASE REMOVE IT AND THEN TRY TO SEND IT.
+http://localhost:2025/myAccount ==> THIS IS GET REQUEST
+SET THE BASIC AUTH AND PASS THE USERNAME AND PASSWORD 
+
+*/

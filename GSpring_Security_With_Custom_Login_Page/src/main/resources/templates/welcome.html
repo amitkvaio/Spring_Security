@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Security App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .welcome-card {
+            margin-top: 80px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-title {
+            color: #0d6efd;
+        }
+
+        .highlight {
+            color: #198754;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" th:href="@{/index}">Spring Security Application</a>
+        <a class="btn btn-outline-light" th:href="@{/logout}">Logout</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="welcome-card">
+        <h2 class="welcome-title text-center">
+            👋 Welcome to <span class="highlight">Spring Security</span> World!
+        </h2>
+        <hr>
+        <p class="fs-5">
+            🔐 <strong>Did you know?</strong><br>
+            By default, <span class="text-primary">Spring Security</span> provides a built-in login form to protect your web applications.
+        </p>
+        <p class="fs-5">
+            ✨ But in real-world scenarios, we often need to create our own <span class="text-danger">custom login page</span> to match the application's UI and branding.
+        </p>
+        <p class="fs-5">
+            🎯 Custom login pages provide flexibility, better user experience, and branding control.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
