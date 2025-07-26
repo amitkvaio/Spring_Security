@@ -22,3 +22,19 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Ignore Eclipse/IDEA metadata
+.metadata/
+.idea/
+*.iml
+
+# Ignore target and build folders
+/target/
+/build/
+
+# Ignore logs
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
