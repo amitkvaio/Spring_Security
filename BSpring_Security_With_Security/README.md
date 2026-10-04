@@ -60,22 +60,22 @@ Continue with [CSpring_Security_InMemory_Authentication](../CSpring_Security_InM
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What happens after adding spring-boot-starter-security?**  
+**Q1. What happens after adding spring-boot-starter-security?** 
 Spring Security protects endpoints by default.
 
-**Q2. Where is the current username available?**  
+**Q2. Where is the current username available?** 
 It is available from the Authentication object.
 
-**Q3. What is SecurityContext?**  
+**Q3. What is SecurityContext?** 
 It stores security details for the current request/thread.
 
-**Q4. Why does the browser show a login page?**  
+**Q4. Why does the browser show a login page?** 
 Spring Security configures form login by default for web apps.
 
-**Q5. What is a principal?**  
+**Q5. What is a principal?** 
 The logged-in user identity.
 
-**Q6. What improves next?**  
+**Q6. What improves next?** 
 Credentials are configured using application properties.
 
 ## Existing HELP Content Preserved
@@ -83,55 +83,54 @@ Credentials are configured using application properties.
 The section below keeps the original generated HELP.md content so no existing project notes are lost.
 
 # Default Features Enabled by spring-boot-starter-security
-___________________________________________________________
 
 # 1.	Basic Authentication is Enabled
->	o	A default login page is provided by Spring Security.
-	o	Every HTTP request to our app is protected by default.
-	o	We will be prompted with a login dialog box in the browser or via a 401 Unauthorized if calling via Postman/cURL.
+- A default login page is provided by Spring Security.
+- Every HTTP request to our app is protected by default.
+- We will be prompted with a login dialog box in the browser or via a 401 Unauthorized if calling via Postman/cURL.
 
 >	Username: user
-	o	Password: A random one printed in the console at startup.
-	o	Using generated security password: 9d7a12f0-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+- Password: A random one printed in the console at startup.
+- Using generated security password: 9d7a12f0-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
-#2.	Form-based Login
->	o	A simple login form is auto-configured.
-	o	You can access it at any protected endpoint like http://localhost:8080/ which will redirect to /login.
+### 2.	Form-based Login
+- A simple login form is auto-configured.
+- You can access it at any protected endpoint like http://localhost:8080/ which will redirect to /login.
 
-#3.	CSRF Protection is Enabled
->	o	CSRF tokens are expected in POST, PUT, DELETE requests.
-	o	It protects your app from Cross-Site Request Forgery attacks.
+### 3.	CSRF Protection is Enabled
+- CSRF tokens are expected in POST, PUT, DELETE requests.
+- It protects your app from Cross-Site Request Forgery attacks.
 
-#4.	All Endpoints Are Secured
->	o	You must be authenticated to access any endpoint.
-	o	No endpoint is publicly accessible unless explicitly configured.
+### 4.	All Endpoints Are Secured
+- You must be authenticated to access any endpoint.
+- No endpoint is publicly accessible unless explicitly configured.
 
-#5.	Session Management
->	o	Session is automatically created after successful login.
-	o	It maintains user state until logout or timeout.
+### 5.	Session Management
+- Session is automatically created after successful login.
+- It maintains user state until logout or timeout.
 
-#6.	Logout Endpoint Provided
->	o	POST request to /logout will end the session.
-	o	It will redirect to /login?logout.
-__________________________________
+### 6.	Logout Endpoint Provided
+- POST request to /logout will end the session.
+- It will redirect to /login?logout.
 # What Type of Authentication Is This?
 >	By default, it's HTTP Basic Authentication and Form-Based Authentication.
-	âœ… Basic Authentication:
-	â€¢	Credentials (username:password) are sent in Authorization header.
-	â€¢	Useful for tools like Postman, curl, or APIs.
-	âœ… Form-Based Authentication:
-	â€¢	Shown when you access the app via a browser.
-	â€¢	Uses a login form at /login.
-_______________________________________
+ Basic Authentication:
+- Credentials (username:password) are sent in Authorization header.
+- Useful for tools like Postman, curl, or APIs.
+ Form-Based Authentication:
+- Shown when you access the app via a browser.
+- Uses a login form at /login.
 # Summary Notes
->	Feature 				Enabled by Default		Description
-	HTTP Basic Auth			âœ…						Uses headers, useful for APIs
-	Form-Based Login		âœ…						Shows login form on browser
-	CSRF Protection			âœ…						Secures against CSRF attacks
-	Session Management		âœ…						Auto session creation post-login
-	Secured Endpoints		âœ…						All endpoints need authentication
-	Logout Endpoint			âœ…						/logout endpoint is available
-	Custom User (Optional)	âŒ						We can override via application.properties
+>	Feature Enabled by Default Description
+	HTTP Basic Auth Uses headers, useful for APIs
+	Form-Based Login Shows login form on browser
+	CSRF Protection Secures against CSRF attacks
+	Session Management Auto session creation post-login
+	Secured Endpoints All endpoints need authentication
+	Logout Endpoint /logout endpoint is available
+	Custom User (Optional) We can override via application.properties
 
-________________________________________
+
+
+
 

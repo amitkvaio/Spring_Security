@@ -63,22 +63,22 @@ Continue with [JSpring_Security_With_Prod_Dev_Env](../JSpring_Security_With_Prod
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What is combined in this chapter?**  
+**Q1. What is combined in this chapter?** 
 Custom login UI plus database-backed authentication.
 
-**Q2. Why use email as username?**  
+**Q2. Why use email as username?** 
 Many real applications use email as login identity.
 
-**Q3. Where is the login template?**  
+**Q3. Where is the login template?** 
 src/main/resources/templates/login.html.
 
-**Q4. Why keep role values in DB?**  
+**Q4. Why keep role values in DB?** 
 Authorization can be changed without code changes.
 
-**Q5. What should be avoided in production?**  
+**Q5. What should be avoided in production?** 
 Default DB passwords and show-sql=true.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 Environment-specific configuration.
 
 ## Existing HELP Content Preserved
@@ -90,10 +90,10 @@ The section below keeps the original generated HELP.md content so no existing pr
 # Below table will get automatically created.
 >
 CREATE TABLE customer (
-  id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  email VARCHAR2(45) NOT NULL,
-  pwd VARCHAR2(200) NOT NULL,
-  role VARCHAR2(45) NOT NULL
+ id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+ email VARCHAR2(45) NOT NULL,
+ pwd VARCHAR2(200) NOT NULL,
+ role VARCHAR2(45) NOT NULL
 );
 
 
@@ -106,24 +106,27 @@ CREATE TABLE customer (
 >
 	http://localhost:2025/register ==> POST REQUEST TRY TO EXECUTE BY POSTMAN
 	{
-	  "email": "user@example.com",
-	  "pwd": "securePassword123",
-	  "role": "USER"
+ "email": "user@example.com",
+ "pwd": "securePassword123",
+ "role": "USER"
 	}
 
  
 #Summary of Flow
 >
-Step	What Happens						Who Handles It
-1		User accesses a secured URL			Spring Security intercepts
-2		User is redirected to /login		Spring Security
-3		User submits login form				Spring Security
-4		Username is looked up in DB			UserDetailsService
-5		Password & roles retrieved			JPA repository
-6		Password matched securely			PasswordEncoder
-7		If match: redirect to /welcome		Spring Security
-8		If fail: redirect to /login?error	Spring Security
-9		On logout: session invalidated		Spring Security
+Step	What Happens Who Handles It
+1 User accesses a secured URL Spring Security intercepts
+2 User is redirected to /login Spring Security
+3 User submits login form Spring Security
+4 Username is looked up in DB UserDetailsService
+5 Password & roles retrieved JPA repository
+6 Password matched securely PasswordEncoder
+7 If match: redirect to /welcome Spring Security
+8 If fail: redirect to /login?error	Spring Security
+9 On logout: session invalidated Spring Security
+
+
+
 
 
 

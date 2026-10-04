@@ -61,22 +61,22 @@ Continue with [FSpring_Security_Basic_And_Form_Based_Authentication](../FSpring_
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What is form-based authentication?**  
+**Q1. What is form-based authentication?** 
 A user submits username and password through an HTML login form.
 
-**Q2. How is login state maintained?**  
+**Q2. How is login state maintained?** 
 Usually with an HTTP session and session cookie.
 
-**Q3. How is it different from Basic auth?**  
+**Q3. How is it different from Basic auth?** 
 Form login uses a login page and session; Basic sends credentials in a header.
 
-**Q4. What is JSESSIONID?**  
+**Q4. What is JSESSIONID?** 
 The default session cookie used by servlet applications.
 
-**Q5. What should protect the login form?**  
+**Q5. What should protect the login form?** 
 HTTPS should protect credentials in transit.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 Combining Basic, Form login, and path authorization rules.
 
 ## Existing HELP Content Preserved
@@ -86,35 +86,38 @@ The section below keeps the original generated HELP.md content so no existing pr
 # http.formLogin(withDefaults())
 #Form-Based Authentication:
 > [!NOTE]
-##âœ… How it works:
-#1.	The user opens a browser and accesses a protected URL like:
-	o	http://localhost:2025/formbased
+## How it works:
+### 1.	The user opens a browser and accesses a protected URL like:
+- http://localhost:2025/formbased
 
-#2.	Spring Security redirects to the default login form (or custom if defined).
+### 2.	Spring Security redirects to the default login form (or custom if defined).
 
-#3.	The user submits the login form with username and password:
-	o	POST /login
-	o	Content-Type: application/x-www-form-urlencoded
-	o	username=amit&password=amit
+### 3.	The user submits the login form with username and password:
+- POST /login
+- Content-Type: application/x-www-form-urlencoded
+- username=amit&password=amit
 
-#4.	Spring Security verifies the credentials.
+### 4.	Spring Security verifies the credentials.
 
-#5.	If correct:
-	o	A session is created on the server side.
-	o	A JSESSIONID cookie is sent back to the browser.
+### 5.	If correct:
+- A session is created on the server side.
+- A JSESSIONID cookie is sent back to the browser.
 
-#6.	On future requests:
-	o	The browser automatically sends the session cookie.
-	o	Spring uses the session ID to identify the logged-in user.
+### 6.	On future requests:
+- The browser automatically sends the session cookie.
+- Spring uses the session ID to identify the logged-in user.
 
 
 # A web page (HTML form) created by Spring Security.
 	We can customize or create your own login page.
 	We can add:
-	    "Remember Me"
-	    "Forgot Password?"
-	    "Sign Up" link
-	    Company logo or background
-	    	
+ "Remember Me"
+ "Forgot Password?"
+ "Sign Up" link
+ Company logo or background
+ 
 #	Spring Security will show a default login web page where users can enter a username and password.
 #	After successful login, it redirects the user to the original requested page
+
+
+

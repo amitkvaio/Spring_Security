@@ -62,22 +62,22 @@ Continue with [KSpring_Security_With_SSL_Configuration](../KSpring_Security_With
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What is a Spring profile?**  
+**Q1. What is a Spring profile?** 
 A named set of configuration activated for an environment.
 
-**Q2. Why separate dev and prod config?**  
+**Q2. Why separate dev and prod config?** 
 Production should use safer logging, secrets, and SSL settings.
 
-**Q3. Why avoid TRACE logs in prod?**  
+**Q3. Why avoid TRACE logs in prod?** 
 They can expose sensitive security details.
 
-**Q4. Why use environment variables?**  
+**Q4. Why use environment variables?** 
 They avoid hardcoding deployment-specific values.
 
-**Q5. What is config hardening?**  
+**Q5. What is config hardening?** 
 Reducing insecure defaults before production.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 SSL/HTTPS configuration.
 
 ## Existing HELP Content Preserved
@@ -91,25 +91,28 @@ The section below keeps the original generated HELP.md content so no existing pr
 	spring.profiles.active=dev
 
 # Means Spring Boot will:
-	â€¢	Load application-dev.properties or application-dev.yml
-	â€¢	Apply any @Profile("dev") beans
-	â€¢	Ignore other profile-specific configs (like test, prod)
+- Load application-dev.properties or application-dev.yml
+- Apply any @Profile("dev") beans
+- Ignore other profile-specific configs (like test, prod)
 
 # Basic property files:
-	File	                      				When Itâ€™s Loaded
-	application.properties	                    	Always (base/default config)
-	application-dev.properties	                	Only if spring.profiles.active=dev
-	application-prod.properties	                	Only if spring.profiles.active=prod
+	File When It's Loaded
+	application.properties Always (base/default config)
+	application-dev.properties Only if spring.profiles.active=dev
+	application-prod.properties Only if spring.profiles.active=prod
 
 # Possible Values
 	We can set any custom profile name. Some common examples:
 
-# 	Value						Usage
-	dev							Development environment
-	test							Testing or QA
-	staging						Pre-production
-	prod							Production environment
-	default						Fallback profile or local dev/testing
-	Multiple: dev,db-mysql				We can activate multiple profiles separated by a comma
+# Value Usage
+	dev Development environment
+	test Testing or QA
+	staging Pre-production
+	prod Production environment
+	default Fallback profile or local dev/testing
+	Multiple: dev,db-mysql We can activate multiple profiles separated by a comma
+
+
+
 
 

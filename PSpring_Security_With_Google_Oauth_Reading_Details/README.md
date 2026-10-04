@@ -66,22 +66,22 @@ Continue with [QSpring_Security_With_GoogleOauth_Saving_Details](../QSpring_Secu
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What is OAuth2 login?**  
+**Q1. What is OAuth2 login?** 
 A delegated login flow using an external identity provider.
 
-**Q2. What is OpenID Connect?**  
+**Q2. What is OpenID Connect?** 
 An identity layer on top of OAuth2.
 
-**Q3. What scopes are requested?**  
+**Q3. What scopes are requested?** 
 openid, email, and profile.
 
-**Q4. What is redirect-uri?**  
+**Q4. What is redirect-uri?** 
 The callback URL where Google sends the authorization response.
 
-**Q5. Should client-secret be committed?**  
+**Q5. Should client-secret be committed?** 
 No. Store it in secrets or environment variables.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 Saving OAuth user details to the database.
 
 ## Existing HELP Content Preserved
@@ -103,5 +103,8 @@ Due to Maven's design, elements are inherited from the parent POM to the project
 While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
+
+
+
 
 

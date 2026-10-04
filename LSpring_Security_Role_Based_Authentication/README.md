@@ -64,22 +64,22 @@ Continue with [MSpring_Security_Simple_Uses_Of_Jwt_Token](../MSpring_Security_Si
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What is RBAC?**  
+**Q1. What is RBAC?** 
 Role-based access control grants permissions by role.
 
-**Q2. What is ROLE_USER?**  
+**Q2. What is ROLE_USER?** 
 A Spring Security authority convention for user role.
 
-**Q3. What is the difference between role and authority?**  
+**Q3. What is the difference between role and authority?** 
 A role is a type of authority with ROLE_ prefix convention.
 
-**Q4. Why store roles in DB?**  
+**Q4. Why store roles in DB?** 
 Roles can be managed without code changes.
 
-**Q5. What is least privilege?**  
+**Q5. What is least privilege?** 
 Give users only the access they need.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 JWT token concepts.
 
 ## Existing HELP Content Preserved
@@ -101,5 +101,8 @@ Due to Maven's design, elements are inherited from the parent POM to the project
 While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
+
+
+
 
 

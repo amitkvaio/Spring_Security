@@ -102,28 +102,28 @@ Start with chapter A, then continue in order until chapter R.
 After chapter R, practice combining database users, roles, HTTPS, JWT, OAuth2, and CSRF-safe browser flows in one small secure application.
 ## Common Interview Questions And Short Answers
 
-**Q1. What is Spring Security?**  
+**Q1. What is Spring Security?** 
 Spring Security is a framework for authentication, authorization, and common web security protections in Spring applications.
 
-**Q2. What is the difference between authentication and authorization?**  
+**Q2. What is the difference between authentication and authorization?** 
 Authentication verifies identity. Authorization checks access permission.
 
-**Q3. What is SecurityFilterChain?**  
+**Q3. What is SecurityFilterChain?** 
 It defines how Spring Security filters HTTP requests.
 
-**Q4. Why should passwords be encoded?**  
+**Q4. Why should passwords be encoded?** 
 Encoded passwords reduce damage if the database is leaked.
 
-**Q5. Why is HTTPS required?**  
+**Q5. Why is HTTPS required?** 
 HTTPS protects credentials, cookies, and tokens during network transfer.
 
-**Q6. What is JWT used for?**  
+**Q6. What is JWT used for?** 
 JWT is used to carry signed claims for stateless authentication or authorization.
 
-**Q7. Why is CSRF dangerous?**  
+**Q7. Why is CSRF dangerous?** 
 A malicious site can force a logged-in browser to send state-changing requests.
 
-**Q8. Why should OAuth client secrets not be committed?**  
+**Q8. Why should OAuth client secrets not be committed?** 
 They allow access to the registered OAuth application and must be kept private.
 
 ## Practice Roadmap
@@ -133,4 +133,7 @@ They allow access to the registered OAuth application and must be kept private.
 3. Run chapters M to O to understand JWT and token storage trade-offs.
 4. Run chapters P and Q to understand OAuth2 login.
 5. Run chapter R to understand why CSRF matters.
+
+
+
 

@@ -65,22 +65,22 @@ Continue with [RSpring_Security_Without_CSRF](../RSpring_Security_Without_CSRF/R
 
 ## Common Interview Questions And Short Answers
 
-**Q1. Why save OAuth user details?**  
+**Q1. Why save OAuth user details?** 
 To create/update local application user records.
 
-**Q2. Which fields are usually saved?**  
+**Q2. Which fields are usually saved?** 
 Email, name, provider, provider id, and profile picture.
 
-**Q3. What is a success handler?**  
+**Q3. What is a success handler?** 
 Logic that runs after successful OAuth login.
 
-**Q4. Why avoid ddl-auto=create-drop in production?**  
+**Q4. Why avoid ddl-auto=create-drop in production?** 
 It can delete data on restart.
 
-**Q5. Can OAuth replace local passwords?**  
+**Q5. Can OAuth replace local passwords?** 
 Yes for users who authenticate through the identity provider.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 Understanding CSRF by disabling it in a demo.
 
 ## Existing HELP Content Preserved
@@ -102,5 +102,8 @@ Due to Maven's design, elements are inherited from the parent POM to the project
 While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
+
+
+
 
 

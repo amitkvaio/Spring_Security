@@ -61,29 +61,29 @@ Continue with [ESpring_Security_Form_Based_Authentication](../ESpring_Security_F
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What is Basic authentication?**  
+**Q1. What is Basic authentication?** 
 A browser/client sends username and password in the Authorization header.
 
-**Q2. Is Basic authentication encrypted?**  
+**Q2. Is Basic authentication encrypted?** 
 No. It must be used over HTTPS to protect credentials.
 
-**Q3. What does SecurityFilterChain do?**  
+**Q3. What does SecurityFilterChain do?** 
 It defines Spring Security rules for HTTP requests.
 
-**Q4. What is UserDetailsService?**  
+**Q4. What is UserDetailsService?** 
 It loads user details for authentication.
 
-**Q5. What is PasswordEncoder?**  
+**Q5. What is PasswordEncoder?** 
 It verifies encoded passwords safely.
 
-**Q6. What is the main drawback of Basic auth?**  
+**Q6. What is the main drawback of Basic auth?** 
 Credentials are sent on every request.
 
 ## Existing HELP Content Preserved
 
 The section below keeps the original generated HELP.md content so no existing project notes are lost.
 
-###  Default Authentication Behavior
+### Default Authentication Behavior
 ### http.httpBasic(withDefaults());
 
 >	It secures all endpoints.
@@ -92,28 +92,31 @@ The section below keeps the original generated HELP.md content so no existing pr
 	
 # Example
 >	When user tries to access: http://localhost:8080/hello	
-		If not logged in, browser shows:
-		Check the image present in /src/main/resouces/static/images/Browserpopup.jpg
-		After entering correct credentials, user is logged in and redirected to /hello
+ If not logged in, browser shows:
+ Check the image present in /src/main/resouces/static/images/Browserpopup.jpg
+ After entering correct credentials, user is logged in and redirected to /hello
 
 # Note
 >	http.httpBasic() uses the browser's built-in login popup.
 	It does not show a web page.
 	We cannot customize the popup (no logo, no design).
 	It is often used for:
-		    APIs (like in Postman)
-		    Command-line tools (like curl)
-		    Simple internal tools or testing purposes
+ APIs (like in Postman)
+ Command-line tools (like curl)
+ Simple internal tools or testing purposes
 	
 # Browser Popup Login
 >	This popup is a built-in feature of your browser.
 	It appears when the server sends back a 401 Unauthorized status with a special header.
 	The popup asks for:
-		Username: _______
-		Password: _______
+ Username: _______
+ Password: _______
 
 >	This popup is not a web page, and you cannot change how it looks.
 	It is best used for:
-		    APIs
-		    Testing
-		    Simple authentication without UI
+ APIs
+ Testing
+ Simple authentication without UI
+
+
+

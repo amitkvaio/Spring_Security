@@ -60,48 +60,50 @@ Continue with [DSpring_Security_Basic_Authentication](../DSpring_Security_Basic_
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What is in-memory authentication?**  
+**Q1. What is in-memory authentication?** 
 Users are stored in application memory, not a database.
 
-**Q2. Is in-memory authentication production-ready?**  
+**Q2. Is in-memory authentication production-ready?** 
 Usually no; it is mainly for demos, tests, or small tools.
 
-**Q3. How are credentials configured here?**  
+**Q3. How are credentials configured here?** 
 Using spring.security.user.name and spring.security.user.password.
 
-**Q4. Why use environment placeholders?**  
+**Q4. Why use environment placeholders?** 
 They allow overriding credentials without changing code.
 
-**Q5. What is the risk of default passwords?**  
+**Q5. What is the risk of default passwords?** 
 They are easy to guess if not changed.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 HTTP Basic authentication is configured explicitly.
 
 ## Existing HELP Content Preserved
 
 The section below keeps the original generated HELP.md content so no existing project notes are lost.
 
-#ðŸ” What is In-Memory Authentication?
+# What is In-Memory Authentication?
 
 ##	In-Memory Authentication means storing user details (username, password, roles) in the application memory, rather than in a database or external system.
 >
 It is:
-â€¢	Easy to configure
-â€¢	Mostly used for development, testing, or small apps
-â€¢	Not suitable for production (because users are lost when the app restarts)
-________________________________________
-##	âœ… When to Use:
+- Easy to configure
+- Mostly used for development, testing, or small apps
+- Not suitable for production (because users are lost when the app restarts)
+## When to Use:
 >
-â€¢	For quick testing/demo apps
-â€¢	When you don't want to connect to a database
-â€¢	To understand how Spring Security works
+- For quick testing/demo apps
+- When you don't want to connect to a database
+- To understand how Spring Security works
 
-##ðŸ§  Key Features:
+## Key Features:
 >
-Feature	 				Description
-Storage	 				In memory (hardcoded users in Java code)
-Authentication Type	 	Can be httpBasic() or formLogin()
-Custom Roles	 		Yes
-Password Encoding		Required (e.g., BCryptPasswordEncoder)
+Feature Description
+Storage In memory (hardcoded users in Java code)
+Authentication Type Can be httpBasic() or formLogin()
+Custom Roles Yes
+Password Encoding Required (e.g., BCryptPasswordEncoder)
+
+
+
 

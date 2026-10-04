@@ -64,22 +64,22 @@ Continue with [PSpring_Security_With_Google_Oauth_Reading_Details](../PSpring_Se
 
 ## Common Interview Questions And Short Answers
 
-**Q1. Why use HttpOnly cookie?**  
+**Q1. Why use HttpOnly cookie?** 
 JavaScript cannot read it, reducing XSS token theft risk.
 
-**Q2. Should Secure be true?**  
+**Q2. Should Secure be true?** 
 Yes in HTTPS production.
 
-**Q3. Does cookie JWT remove CSRF risk?**  
+**Q3. Does cookie JWT remove CSRF risk?** 
 No. Cookies are sent automatically, so CSRF must be considered.
 
-**Q4. What is SameSite?**  
+**Q4. What is SameSite?** 
 A cookie attribute controlling cross-site sending.
 
-**Q5. What endpoint generates the cookie?**  
+**Q5. What endpoint generates the cookie?** 
 /api/jwt/generate.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 OAuth2 login with Google.
 
 ## Existing HELP Content Preserved
@@ -101,5 +101,8 @@ Due to Maven's design, elements are inherited from the parent POM to the project
 While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
+
+
+
 
 

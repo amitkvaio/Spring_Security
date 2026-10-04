@@ -64,22 +64,22 @@ Continue with [LSpring_Security_Role_Based_Authentication](../LSpring_Security_R
 
 ## Common Interview Questions And Short Answers
 
-**Q1. Why is HTTPS important?**  
+**Q1. Why is HTTPS important?** 
 It encrypts credentials, cookies, and tokens in transit.
 
-**Q2. What is a keystore?**  
+**Q2. What is a keystore?** 
 A file that stores private keys and certificates.
 
-**Q3. What is PKCS12?**  
+**Q3. What is PKCS12?** 
 A common keystore format.
 
-**Q4. Why set Secure cookies?**  
+**Q4. Why set Secure cookies?** 
 So cookies are sent only over HTTPS.
 
-**Q5. What is session timeout?**  
+**Q5. What is session timeout?** 
 How long an inactive session remains valid.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 Role-based authorization.
 
 ## Existing HELP Content Preserved
@@ -87,5 +87,8 @@ Role-based authorization.
 The section below keeps the original generated HELP.md content so no existing project notes are lost.
 
 # Spring profiles
+
+
+
 
 

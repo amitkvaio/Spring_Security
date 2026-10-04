@@ -63,22 +63,22 @@ Continue with [NSpring_Security_With_Jwt_Orace_Auth](../NSpring_Security_With_Jw
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What is JWT?**  
+**Q1. What is JWT?** 
 A signed token carrying claims between client and server.
 
-**Q2. What are the three JWT parts?**  
+**Q2. What are the three JWT parts?** 
 Header, payload, and signature.
 
-**Q3. Is JWT encrypted by default?**  
+**Q3. Is JWT encrypted by default?** 
 No. It is encoded and signed, not encrypted.
 
-**Q4. Why use expiration?**  
+**Q4. Why use expiration?** 
 To limit the lifetime of stolen tokens.
 
-**Q5. Where should signing keys be stored?**  
+**Q5. Where should signing keys be stored?** 
 In secure external configuration or secret storage.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 JWT authentication with Oracle users.
 
 ## Existing HELP Content Preserved
@@ -100,5 +100,8 @@ Due to Maven's design, elements are inherited from the parent POM to the project
 While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
+
+
+
 
 

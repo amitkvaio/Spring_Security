@@ -64,22 +64,22 @@ This is the final chapter. Practice by enabling CSRF protection and comparing th
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What is CSRF?**  
+**Q1. What is CSRF?** 
 An attack where a logged-in browser is tricked into submitting an unwanted request.
 
-**Q2. Why are cookies involved?**  
+**Q2. Why are cookies involved?** 
 Browsers automatically send cookies with matching requests.
 
-**Q3. When is CSRF most important?**  
+**Q3. When is CSRF most important?** 
 For browser-based session applications with state-changing actions.
 
-**Q4. Should CSRF be disabled in production?**  
+**Q4. Should CSRF be disabled in production?** 
 Usually no for form/session apps.
 
-**Q5. When can APIs disable CSRF?**  
+**Q5. When can APIs disable CSRF?** 
 Often for stateless APIs that do not use cookies for auth.
 
-**Q6. What is the best next practice?**  
+**Q6. What is the best next practice?** 
 Re-enable CSRF and add a valid CSRF token to the transfer form.
 
 ## Existing HELP Content Preserved
@@ -101,5 +101,8 @@ Due to Maven's design, elements are inherited from the parent POM to the project
 While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
+
+
+
 
 

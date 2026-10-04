@@ -59,73 +59,64 @@ Continue with [BSpring_Security_With_Security](../BSpring_Security_With_Security
 
 ## Common Interview Questions And Short Answers
 
-**Q1. What is the main risk here?**  
+**Q1. What is the main risk here?** 
 Any user can access the endpoint without proving identity.
 
-**Q2. What is authentication?**  
+**Q2. What is authentication?** 
 Authentication verifies who the user is.
 
-**Q3. What is authorization?**  
+**Q3. What is authorization?** 
 Authorization decides what an authenticated user can access.
 
-**Q4. Why start without security?**  
+**Q4. Why start without security?** 
 It gives a baseline before adding Spring Security.
 
-**Q5. What is an attack surface?**  
+**Q5. What is an attack surface?** 
 All reachable endpoints and inputs that an attacker can try.
 
-**Q6. What changes in the next chapter?**  
+**Q6. What changes in the next chapter?** 
 Spring Security is added and requests require login by default.
 
 ## Existing HELP Content Preserved
 
 The section below keeps the original generated HELP.md content so no existing project notes are lost.
 
-#â— Risks If We Donâ€™t Add Spring Security or ðŸš¨ Why Building a Spring Application Without Security is Risky:
-________________________________________________________________________________
+# Risks If We Don't Add Spring Security or Why Building a Spring Application Without Security is Risky:
 
-#1.	ðŸš« No Authentication
->	o	Anyone can access all your APIs and web pages.
-	o	No one is asked to log in â€” no username or password required.
-	âœ… 	Example: If you have an /admin endpoint, anyone on the internet can open it.
-________________________________________________________________________________
-#2.	ðŸ”“ No Authorization
->	o	We cannot control who is allowed to do what.
-	o	All users (even hackers) can access all data and perform actions.
-	âœ… 	Example: Anyone could delete user records or change important data.
-________________________________________________________________________________
-#3.	âš ï¸ No CSRF Protection
->	o	Without CSRF (Cross-Site Request Forgery) protection, attackers can trick users into performing unwanted actions.
-	o	Very dangerous if you have forms like money transfer, password change, etc.
-________________________________________________________________________________
-#4.	ðŸ•µï¸ No Protection for Sensitive Data
->	o	Passwords, tokens, and user info are not secured.
-	o	No encryption, no filters â€” attackers can easily steal or misuse data.
-________________________________________________________________________________
-#5.	ðŸ“‚ Open Endpoints
->	o	All REST APIs are publicly available.
-	o	Anyone can call your endpoints from anywhere (even bots or hackers).
-________________________________________________________________________________
-#6.	ðŸ›  No Login or Logout Features
->	o	We cannot implement secure login/logout flows on your own easily.
-	o	We have to write full login logic from scratch (which may have bugs or loopholes).
-________________________________________________________________________________
-#7.	ðŸ“ˆ Easy Target for Attackers
->	o	Hackers look for unsecured apps on the internet.
-	o	No security makes your app an easy target for brute-force, SQL injection, or XSS attacks.
-________________________________________________________________________________
-#8.	ðŸ” No Session Management
->	o	We can't track user login sessions.
-	o	Users stay logged in forever unless you handle it manually.
-________________________________________________________________________________
-#9.	ðŸ§ª No Built-in Security Testing
->	o	We lose Spring Securityâ€™s powerful security filters and checks.
-	o	We have to manually test everything, which is hard and error-prone.
-________________________________________________________________________________
-________________________________________________________________________________
-# Why You Should Use spring-boot-starter-security
->	â€¢	It gives basic protection out of the box.
-	â€¢	We get login, logout, session handling, CSRF, and secure headers automatically.
-	â€¢	Later, you can customize it as per your needs (like using JWT, OAuth2, etc.).
-________________________________________
+### 1. No Authentication
+- Anyone can access all your APIs and web pages.
+- No one is asked to log in - no username or password required.
+- Example: If you have an /admin endpoint, anyone on the internet can open it.
+### 2. No Authorization
+- We cannot control who is allowed to do what.
+- All users (even hackers) can access all data and perform actions.
+- Example: Anyone could delete user records or change important data.
+### 3. No CSRF Protection
+- Without CSRF (Cross-Site Request Forgery) protection, attackers can trick users into performing unwanted actions.
+- Very dangerous if you have forms like money transfer, password change, etc.
+### 4. No Protection for Sensitive Data
+- Passwords, tokens, and user info are not secured.
+- No encryption, no filters - attackers can easily steal or misuse data.
+### 5. Open Endpoints
+- All REST APIs are publicly available.
+- Anyone can call your endpoints from anywhere (even bots or hackers).
+### 6. No Login or Logout Features
+- We cannot implement secure login/logout flows on your own easily.
+- We have to write full login logic from scratch (which may have bugs or loopholes).
+### 7. Easy Target for Attackers
+- Hackers look for unsecured apps on the internet.
+- No security makes your app an easy target for brute-force, SQL injection, or XSS attacks.
+### 8. No Session Management
+- We can't track user login sessions.
+- Users stay logged in forever unless you handle it manually.
+### 9. No Built-in Security Testing
+- We lose Spring Security's powerful security filters and checks.
+- We have to manually test everything, which is hard and error-prone.
+### Why You Should Use spring-boot-starter-security
+- It gives basic protection out of the box.
+- We get login, logout, session handling, CSRF, and secure headers automatically.
+- Later, you can customize it as per your needs (like using JWT, OAuth2, etc.).
+
+
+
 

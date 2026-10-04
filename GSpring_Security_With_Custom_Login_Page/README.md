@@ -61,22 +61,22 @@ Continue with [HSpring_Security_With_OracleDB_Intraction](../HSpring_Security_Wi
 
 ## Common Interview Questions And Short Answers
 
-**Q1. Why create a custom login page?**  
+**Q1. Why create a custom login page?** 
 To match application UI and user experience.
 
-**Q2. What fields does Spring Security expect by default?**  
+**Q2. What fields does Spring Security expect by default?** 
 username and password.
 
-**Q3. What is loginProcessingUrl?**  
+**Q3. What is loginProcessingUrl?** 
 The URL Spring Security processes for login submission.
 
-**Q4. Why is CSRF important for login forms?**  
+**Q4. Why is CSRF important for login forms?** 
 It prevents unwanted forged form submissions.
 
-**Q5. What template engine is used?**  
+**Q5. What template engine is used?** 
 Thymeleaf.
 
-**Q6. What comes next?**  
+**Q6. What comes next?** 
 Loading users from Oracle DB instead of memory.
 
 ## Existing HELP Content Preserved
@@ -87,27 +87,30 @@ The section below keeps the original generated HELP.md content so no existing pr
 ## Maven Dependency
 
 	<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-security</artifactId>
 	</dependency>
 	
 	<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-thymeleaf</artifactId>
 	</dependency>
 
 ##Code
 	http.formLogin(
-                form -> form
-                .loginPage("/login") ----> Specifies the custom login page URL
-                .loginProcessingUrl("/login")-----> URL that spring security will use to process
-                .defaultSuccessUrl("/welcome")-------------> Page redirect after successful login
-                .permitAll());---------------------->Allow everyone to access the login page.
-    	
-    	http.logout(
-                logout -> logout
-                .logoutUrl("/logout") ------------> URL trigger logout
-                .permitAll()); ------------------------> Allow everyone to access the logout URL.
+ form -> form
+ .loginPage("/login") ----> Specifies the custom login page URL
+ .loginProcessingUrl("/login")-----> URL that spring security will use to process
+ .defaultSuccessUrl("/welcome")-------------> Page redirect after successful login
+ .permitAll());---------------------->Allow everyone to access the login page.
+ 
+ http.logout(
+ logout -> logout
+ .logoutUrl("/logout") ------------> URL trigger logout
+ .permitAll()); ------------------------> Allow everyone to access the logout URL.
+
+
+
 
 
 
